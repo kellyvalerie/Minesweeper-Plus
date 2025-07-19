@@ -1,4 +1,6 @@
 # Minesweeper-Plus
+A python-based game project that prioritze problem solving and critical thinking skill.
+
 ### What is Minesweeper?
 
 Minesweeper is a logic puzzle game. 
