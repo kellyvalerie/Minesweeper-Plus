@@ -1,0 +1,159 @@
+HOW TO RUN CODE IN ED WORKSPACE:
+    Click (Open Terminal) button
+    Type: python3 game.py
+________________________________________________________________
+
+Code logic : 
+# 1 = bomb_planting
+# 2 = main
+# 3 = evaluate_bomb
+# 4 = neighbour bomb 
+# 5 = mining
+# 6 = print user_board
+# 7 = repeat from main
+
+________________________________________________________________
+** AGENDA FOR NEXT MEETING :
+1. remove medium and hard, only have 1 difficulty with power ups, to show it's not a regular minesweeper but a innovative one.
+2. try game and search for bugs (15% grade correctness)
+**
+
+*** DEADLINES:
+Date to start working for the 2 videos = 5th Nov at tutorial
+***
+
+---------------------------------------------------------------------------------------------
+
+*output more neat (formatting string?)= maggie, rosette
+    what to improve:
+    - erase the commas
+    - make it in one line (Use "|") (but better to use from this link https://en.wikipedia.org/wiki/Box-drawing_characters)
+    - emoji -> for bombs
+    - output number with colors (1 = blue, 2 = green, 3 = red, ...)
+    - make the number align in one line when game over
+    
+*power ups = Tyni
+    - second live
+    +Safe Click: Allows the player to safely click on a tile without any risk of hitting a mine.
+    +Extra Life: Grants the player an additional chance to continue the game after hitting a mine.
+    -Teleport: Allows the player to teleport to any tile on the board once per game.
+    +Bomb Sweep: Clears a random 3x3 area of the board without triggering any mines.
+    +Add time:
+    
+*timer countdown, input problem (0-8) = kelly
+
+*flag and question, bomb counter = rio:
+    1. make the flag function -> need also for unflag, 
+        - if bomb_counter = 0, check if all the flags are bombs, if so end game
+        - (ask user for mode input: "F", "Q", "D")
+    2. make question mark function (logic same as flag function)
+
+----------------------------------------------------------------------------------------------------
+
+(ideas:)
+1.mark the wrong mine that the user digs (red highlight)
+2.if all the mines around a cell have been marked out, then the player can dig the cell again to dig all the cells around it. 
+3.overline?underline?
+4.row numbers and column numbers marked on the board!
+5.one bug 
+6.clear screen after each input?
+7.more powerups(second life, countdown, clues, add time, protected dig, etc)
+8.another mode(if we have time):the mines are dug in the shape of a number, after the player successfully sweep the mine grid, the 
+  player can get the number.There are 4/5/6 levels in total, so the player can get 4/5/6 numbers which forms a four digit password 
+  to the final treasure.(can be displayed in a story)(we can design 10 grids for 10 digits, and all the code left are exactly the 
+  same, which won't spend a lot of time coding this but this mode is gonna to be interesting!)
+9. add positive timing in the classical mode
+solve the problems mentioned above in the following week
+
+---------------------------------------------------------------------
+notes :
+bombsweep =
+- each time they use bombsweep, add checked counter by 9 because it revealed 9 cells, not 1
+
+maggy.py =
+- add a emoji bomb
+
+mine.py=
+- make it 2 mode only : 1) customized 2)normal
+- for the customized = make the ratio of number of bomb, so they can not in
+-  fix unflag, outputboard
+- add row,column description number on the output
+
+number of dimension = 9 - 22 dimension
+number of bombs = 
+number of powerups =
+times =
+
+3. introduce bad power ups:
+    - you've hit a power up: want to take? (there's a good power up and bad power up)
+        - randomize get good or bad power up
+
+    +Safe Click: Allows the player to safely click on a tile without any risk of hitting a mine.
+    (done) +Extra Life: Grants the player an additional chance to continue the game after hitting a mine.
+    -(lower weight)Teleport: Allows the player to teleport to any tile on the board once per game.
+    (done)+Bomb Sweep: Clears a random 3x3 area of the board without triggering any mines.
+    +Add time:
+    +reveal 1 bomb randomly
+    -limited input left:
+    -reduce time
+
+what kind of 
+Good powerups(+): 
+1. bompsweep (for hard one), low chance weight => tyni
+2. immunity => tyni
+3. add time => kelly
+4. extra life => tyni
+5. reveal 1 bomb => maggy
+
+Bad powerups(-):
+1. time reduction => kelly
+2. limited dig => rosette
+3. close 1 cell => maggy
+
+- random power up generator = rio
+- randomly plant power up = rio
+- power up = kelly, tyni, rosette, maggy
+- fix game difficulty = rio, kelly
+- update comments in mine.py = rio
+- if have time, improve output with emojis, and chess grids
+
+Top Left Corner:
+Character: ╔
+Unicode: U+2554
+Top Right Corner:
+Character: ╗
+Unicode: U+2557
+Bottom Left Corner:
+Character: ╚
+Unicode: U+255A
+Bottom Right Corner:
+Character: ╝
+Unicode: U+255D
+Vertical Line:
+Character: ║
+Unicode: U+2551
+Horizontal Line:
+Character: ═══
+Unicode: U+2550 (for double horizontal lines)
+Top Divider:
+Character: ╦
+Unicode: U+2566
+Bottom Divider:
+Character: ╩
+Unicode: U+2569
+Middle Divider:
+Character: ╬
+Unicode: U+256C
+
+
+- tyni : done
+- maggie : bomb reveal, teleport, random choose powerup
+- kelly: fix (-) remaining time
+- rosette: limited input left -> correctbombs
+- rio: randomly 25% chance give powerups everytime the user inputs
+
+
+
+
+
+
